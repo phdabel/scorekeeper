@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">Score Keeper</string>
+    <string name="app_name">Soccer Score Keeper</string>
+
+    <!-- buttons -->
+    <string name="btn_reset">Reset</string>
+    <string name="btn_goal">Goal</string>
+    <string name="btn_foul">Foul</string>
+    <string name="btn_obstruction">Obstruction</string>
+    <string name="btn_redcard">Red Card</string>
+    <string name="btn_yellowcard">Yellow Card</string>
+
+    <!-- labels -->
+    <string name="lbl_goals">Goals: </string>
+    <string name="lbl_fouls">Fouls: </string>
+    <string name="lbl_obstructions">Obstructions: </string>
+    <string name="lbl_redcards">Red Cards: </string>
+    <string name="lbl_yellowcards">Yellow Cards: </string>
+
 </resources>
