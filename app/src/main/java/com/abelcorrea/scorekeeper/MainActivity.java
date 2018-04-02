@@ -18,6 +18,22 @@ public class MainActivity extends AppCompatActivity {
      */
     public void reset(View v){
 
+        Toast.makeText(MainActivity.this, "TOAAASSTYY", Toast.LENGTH_SHORT).show();
+        TextView goalA = (TextView) findViewById(R.id.team_a_score);
+        goalA.setText("0");
+        TextView goalB = (TextView) findViewById(R.id.team_b_score);
+        goalB.setText("0");
+
+        LinearLayout foulA = (LinearLayout) findViewById(R.id.foul_value_a);
+        foulA.removeAllViewsInLayout();
+        LinearLayout foulB = (LinearLayout) findViewById(R.id.foul_value_b);
+        foulB.removeAllViewsInLayout();
+
+        LinearLayout cardA = (LinearLayout) findViewById(R.id.cards_value_a);
+        cardA.removeAllViewsInLayout();
+        LinearLayout cardB = (LinearLayout) findViewById(R.id.cards_value_b);
+        cardB.removeAllViewsInLayout();
+
     }
 
     @Override
