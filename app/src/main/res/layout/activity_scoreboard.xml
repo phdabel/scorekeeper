@@ -7,7 +7,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/colorAccent">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -16,62 +17,73 @@
 
             <LinearLayout
                 android:id="@+id/layout_team_a"
-                android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="16dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:paddingTop="16dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
                     android:gravity="center_horizontal"
-                    android:text="Team A" />
+                    android:text="Team A"
+                    android:textColor="@color/colorText"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/team_a_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
                     android:gravity="center_horizontal"
-                    android:text="0"/>
+                    android:text="0"
+                    android:textColor="@color/colorText"
+                    android:textSize="56sp"
+                    android:textStyle="bold" />
 
                 <ImageButton
                     android:id="@+id/img_goal_a"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    app:srcCompat="@drawable/ball"
+                    android:paddingBottom="8dp"
                     android:scaleType="fitCenter"
-                    />
+                    app:srcCompat="@drawable/ball" />
 
                 <ImageButton
                     android:id="@+id/img_foul_a"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    app:srcCompat="@drawable/foul"
+                    android:paddingBottom="8dp"
                     android:scaleType="fitCenter"
-                    />
+                    app:srcCompat="@drawable/foul" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp">
 
                     <ImageButton
                         android:id="@+id/img_yellowcard_a"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/yellow_card"
                         android:scaleType="fitCenter"
-                        />
+                        app:srcCompat="@drawable/yellow_card" />
 
                     <ImageButton
                         android:id="@+id/img_redcard_a"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/red_card"
                         android:scaleType="fitCenter"
-                        />
+                        app:srcCompat="@drawable/red_card" />
 
                 </LinearLayout>
 
@@ -92,7 +104,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
                             android:text="@string/lbl_fouls"
+                            android:textColor="@color/colorWhite"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -117,7 +131,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
                             android:text="@string/lbl_cards"
+                            android:textColor="@color/colorWhite"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -132,65 +148,80 @@
 
             </LinearLayout>
 
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite" />
+
             <LinearLayout
                 android:id="@+id/layout_team_b"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_weight="1"
-                >
+                android:orientation="vertical"
+                android:paddingBottom="16dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:paddingTop="16dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
                     android:gravity="center_horizontal"
-                    android:text="Team B" />
+                    android:text="Team B"
+                    android:textColor="@color/colorText"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/team_b_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
                     android:gravity="center_horizontal"
-                    android:text="0"/>
+                    android:text="0"
+                    android:textColor="@color/colorText"
+                    android:textSize="56sp"
+                    android:textStyle="bold" />
 
                 <ImageButton
                     android:id="@+id/img_goal_b"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    app:srcCompat="@drawable/ball"
+                    android:paddingBottom="8dp"
                     android:scaleType="fitCenter"
-                    />
+                    app:srcCompat="@drawable/ball" />
 
                 <ImageButton
                     android:id="@+id/img_foul_b"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    app:srcCompat="@drawable/foul"
+                    android:paddingBottom="8dp"
                     android:scaleType="fitCenter"
-                    />
+                    app:srcCompat="@drawable/foul" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp">
 
                     <ImageButton
                         android:id="@+id/img_yellowcard_b"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/yellow_card"
                         android:scaleType="fitCenter"
-                        />
+                        app:srcCompat="@drawable/yellow_card" />
 
                     <ImageButton
                         android:id="@+id/img_redcard_b"
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/red_card"
                         android:scaleType="fitCenter"
-                        />
+                        app:srcCompat="@drawable/red_card" />
 
                 </LinearLayout>
 
@@ -211,7 +242,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
                             android:text="@string/lbl_fouls"
+                            android:textColor="@color/colorWhite"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -233,7 +266,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
                             android:text="@string/lbl_cards"
+                            android:textColor="@color/colorWhite"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -254,15 +289,18 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_gravity="center|bottom"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingLeft="140dp"
+            android:paddingRight="140dp">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="reset"
                 android:text="@string/btn_reset"
-                android:onClick="reset"/>
+                android:textColor="@color/colorText" />
         </LinearLayout>
 
 
