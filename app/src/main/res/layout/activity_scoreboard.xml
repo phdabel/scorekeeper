@@ -34,138 +34,96 @@
                     android:gravity="center_horizontal"
                     android:text="0"/>
 
-                <Button
+                <ImageButton
+                    android:id="@+id/img_goal_a"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btn_goal"
-                    android:onClick="goalA"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/ball"
+                    android:scaleType="fitCenter"
                     />
 
-                <Button
+                <ImageButton
+                    android:id="@+id/img_foul_a"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btn_foul"
-                    android:onClick="foulA" />
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/foul"
+                    android:scaleType="fitCenter"
+                    />
 
-                <Button
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btn_obstruction"
-                    android:onClick="obstructionA" />
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btn_redcard"
-                    android:onClick="redCardA" />
+                    <ImageButton
+                        android:id="@+id/img_yellowcard_a"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/yellow_card"
+                        android:scaleType="fitCenter"
+                        />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btn_yellowcard"
-                    android:onClick="yellowCardA" />
+                    <ImageButton
+                        android:id="@+id/img_redcard_a"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/red_card"
+                        android:scaleType="fitCenter"
+                        />
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:id="@+id/blk_fouls_a"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_fouls"
+                            android:textStyle="bold" />
 
                         <LinearLayout
+                            android:id="@+id/foul_value_a"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="10dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/lbl_fouls"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/foul_value_a"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0" />
+                            android:layout_height="15dp"
+                            android:layout_gravity="clip_horizontal"
+                            android:orientation="horizontal">
 
                         </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal"
-                            android:padding="10dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/lbl_obstructions"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/obstruction_value_a"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0" />
-
-                        </LinearLayout>
-
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:id="@+id/blk_cards_a"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal"
-                            android:padding="10dp">
+                            android:text="@string/lbl_cards"
+                            android:textStyle="bold" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/lbl_redcards"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/redcard_value_a"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal"
-                            android:padding="10dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/lbl_yellowcards"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/yellowcard_value_a"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0"/>
-
-                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/cards_value_a"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
 
                     </LinearLayout>
 
@@ -194,138 +152,94 @@
                     android:gravity="center_horizontal"
                     android:text="0"/>
 
-                <Button
+                <ImageButton
+                    android:id="@+id/img_goal_b"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btn_goal"
-                    android:onClick="goalB"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/ball"
+                    android:scaleType="fitCenter"
                     />
 
-                <Button
+                <ImageButton
+                    android:id="@+id/img_foul_b"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btn_foul"
-                    android:onClick="foulB" />
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btn_obstruction"
-                    android:onClick="obstructionB"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/foul"
+                    android:scaleType="fitCenter"
                     />
 
-                <Button
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btn_redcard"
-                    android:onClick="redCardB"
-                    />
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btn_yellowcard"
-                    android:onClick="yellowCardB" />
+                    <ImageButton
+                        android:id="@+id/img_yellowcard_b"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/yellow_card"
+                        android:scaleType="fitCenter"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/img_redcard_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/red_card"
+                        android:scaleType="fitCenter"
+                        />
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:id="@+id/blk_fouls_b"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_fouls"
+                            android:textStyle="bold" />
 
                         <LinearLayout
+                            android:id="@+id/foul_value_b"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="10dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/lbl_fouls"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/foul_value_b"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal"
-                            android:padding="10dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/lbl_obstructions"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/obstruction_value_b"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0" />
-                        </LinearLayout>
+                            android:layout_height="15dp"
+                            android:orientation="horizontal"></LinearLayout>
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:id="@+id/blk_cards_b"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lbl_cards"
+                            android:textStyle="bold" />
 
                         <LinearLayout
+                            android:id="@+id/cards_value_b"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal"
-                            android:padding="10dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/lbl_redcards"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/redcard_value_b"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal"
-                            android:padding="10dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/lbl_yellowcards"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/yellowcard_value_b"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="0"/>
-
-                        </LinearLayout>
+                            android:layout_height="15dp"
+                            android:orientation="horizontal"></LinearLayout>
 
                     </LinearLayout>
 
