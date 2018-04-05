@@ -14,5 +14,6 @@
     <string name="goal_warn">GOAAAAAAALLLLL!</string>
     <string name="yellowcard_warn">YELLOW CARD.</string>
     <string name="redcard_warn">RED CARD.</string>
+    <string name="RESET_MSG">TOAAASSTYY</string>
 
 </resources>

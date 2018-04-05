@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    final int IMAGE_DIP = 15;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void reset(View v){
 
-        Toast.makeText(MainActivity.this, "TOAAASSTYY", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, R.string.RESET_MSG, Toast.LENGTH_SHORT).show();
         TextView goalA = (TextView) findViewById(R.id.team_a_score);
         goalA.setText("0");
         TextView goalB = (TextView) findViewById(R.id.team_b_score);
@@ -251,9 +253,7 @@ public class MainActivity extends AppCompatActivity {
             ImageView img = new ImageView(this);
             img.setImageResource(drawableId);
 
-            /** @TODO (1) the value 15 corresponds to the dip of the images in the fouls block. It is a good idea keep these parameters in a xml in values. */
-            /** @var DIP of the images in the fouls block converted into pixels.  */
-            int width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 15, getResources().getDisplayMetrics());
+            int width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, IMAGE_DIP, getResources().getDisplayMetrics());
             img.setLayoutParams(new LinearLayout.LayoutParams(width,LinearLayout.LayoutParams.MATCH_PARENT));
 
             block.addView(img);

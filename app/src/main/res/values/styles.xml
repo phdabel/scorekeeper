@@ -9,4 +9,12 @@
         <item name="colorButtonNormal">@color/colorAccent</item>
     </style>
 
+    <!-- Cards ImageButton Style -->
+    <style name="CardButton" parent="@style/AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
 </resources>
